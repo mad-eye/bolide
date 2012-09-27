@@ -4,6 +4,8 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "express": "3.0.0rc4"
+    "express": "3.0.0rc4",
+    "redis": "~0.8.1",
+    "share": "~0.5.0"
   }
 }
