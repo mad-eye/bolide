@@ -5,16 +5,19 @@ var sharejs = require('share').server;
 var options = {db: {type: 'redis'}};
 sharejs.attach(app, options);
 
-app.get('/', function(req, res){
-  res.send('Hello World');
-});
+//Put routing in routs.js
+require('./routes')(app);
 
-app.get('/github', function(req, res){
-  //res.send('Hello Github!' + __dirname);
-  var path = __dirname + "/views/github.jade";
-  console.log("Rendering " + path);
-  res.render(path, {});
-});
+//app.get('/', function(req, res){
+//  res.send('Hello World');
+//});
+
+//app.get('/github', function(req, res){
+//  //res.send('Hello Github!' + __dirname);
+//  var path = __dirname + "/views/github.jade";
+//  console.log("Rendering " + path);
+//  res.render(path, {});
+//});
 
 app.use(express.static(__dirname + '/public'));
 
