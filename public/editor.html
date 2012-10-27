@@ -4,11 +4,14 @@
 <script src="/channel/bcsocket.js"></script>
 <script src="/share/share.js"></script>
 <script src="/share/ace.js"></script>
+<script src="underscore.js"></script>
 
 <script>
 	window.onload = function(){
 	    var editor = ace.edit("editor");
-	    sharejs.open('hello', 'text', function(error, doc) {
+    	//TODO proper regex parameter parsing here
+        var id = document.location.href.split("id=")[1]
+	    sharejs.open(id, 'text', function(error, doc) {
 	        doc.attach_ace(editor);
 	    });
 	};
