@@ -1,7 +1,7 @@
 bolide
 ======
 
-An _Exceptionally_ Bright Meteor
+An _Exceptionally_ Bright Meteor!
 
 Bolide is responsible for running ShareJS.
 
