@@ -17,7 +17,7 @@ describe "app", ->
     request.put "http://#{host}:#{port}/doc/#{fake_doc_id}", {body: '{"type": "text"}'}, (error, response, body)->
       console.log "status code is #{error} #{response.statusCode}, #{body}"
       assert.equal response.statusCode, 200
-      request.get "http://#{host}:#{port}/doc/fake_doc_id", (error, response, body)->
+      request.get "http://#{host}:#{port}/doc/#{fake_doc_id}", (error, response, body)->
         console.log "status code is #{response.statusCode}"
         assert.equal response.statusCode, 200
         done()
