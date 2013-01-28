@@ -3,7 +3,7 @@ bolide
 
 An _Exceptionally_ Bright Meteor!
 
-Bolide is responsible for running ShareJS.
+Bolide is responsible for running ShareJS!
 
 It can be run with node app.js
 
