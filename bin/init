@@ -1,4 +1,4 @@
 #! /bin/sh
 
-npm install
-npm install share
+npm install -q share
+npm install -q
