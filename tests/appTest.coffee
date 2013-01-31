@@ -6,9 +6,9 @@ host = "localhost"
 port = 3003
 
 describe "app", ->
-  it "responds with 404 on root", (done)->
+  it "responds with 200 on root", (done)->
     request.get "http://#{host}:#{port}/", (error, response, body)->
-      assert.equal response.statusCode, 404
+      assert.equal response.statusCode, 200
       done()
 
   it "allows an empty document to be able to be created with put and retrieved with get", (done)->

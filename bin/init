@@ -1,3 +1,6 @@
 #! /bin/sh
 
-npm install
+git submodule update --init --recursive
+npm install -q .madeye-common
+npm install -q share
+npm install -q
