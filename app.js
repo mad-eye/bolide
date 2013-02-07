@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var sharejs = require('share').server;
 var Settings = require('madeye-common').Settings
+var logger = require('./logger').logger
 
 //TODO be more restrictive about domains
 var options = {db: {type: 'redis'}, browserChannel:{cors: "*"}};
@@ -12,4 +13,4 @@ app.get("/", function(req,res){
 });
 
 app.listen(Settings.bolidePort);
-console.log("Listening on port " + Settings.bolidePort);
+logger.debug("Listening on port " + Settings.bolidePort);
