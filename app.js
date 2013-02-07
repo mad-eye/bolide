@@ -3,6 +3,7 @@ var app = express();
 var sharejs = require('share').server;
 var Settings = require('madeye-common').Settings
 
+//TODO be more restrictive about domains
 var options = {db: {type: 'redis'}, browserChannel:{cors: "*"}};
 sharejs.attach(app, options);
 
