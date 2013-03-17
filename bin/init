@@ -11,4 +11,4 @@ fi
 basedir=`dirname $0`
 
 git submodule update --init --recursive
-$basedir/install --production
+$basedir/install $production
