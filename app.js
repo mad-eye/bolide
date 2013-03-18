@@ -1,8 +1,11 @@
 var express = require('express');
 var app = express();
 var sharejs = require('share').server;
-var Settings = require('madeye-common').Settings
-var logger = require('./logger').logger
+var Settings = require('madeye-common').Settings;
+var logger = require('./logger').logger;
+var cors = require("./cors");
+
+app.use(cors());
 
 //TODO be more restrictive about domains
 var options = {db: {type: 'redis'}, browserChannel:{cors: "*"}};
