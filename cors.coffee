@@ -5,6 +5,7 @@ module.exports = allowCrossDomainSetup = () ->
     res.header('Access-Control-Allow-Origin', '*')
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE')
     res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+    res.header 'Access-Control-Expose-Headers', 'x-ot-version'
     # intercept OPTIONS method
     if 'OPTIONS' == req.method
       res.send(200)
