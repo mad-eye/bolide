@@ -9,5 +9,4 @@ else
 fi
 
 npm install -q $production .madeye-common
-npm install -q $production share
 npm install -q $production
