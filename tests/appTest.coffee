@@ -21,5 +21,4 @@ describe "app", ->
         console.log "status code is #{response.statusCode}"
         assert.equal response.statusCode, 200
         done()
-    
-    
+
