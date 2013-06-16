@@ -7,10 +7,10 @@
     "start": "node-dev app"
   },
   "dependencies": {
-    "express": "~3.1.0",
+    "express": "~3.2.0",
     "redis": "~0.8.1",
     "share": "git://github.com/mad-eye/ShareJS.git#ace-cursors",
-    "coffee-script": "~1.5.0",
+    "coffee-script": "~1.6.3",
     "madeye-common": "0.0.4",
     "winston": "~0.7.1",
     "winston-loggly": "~0.6.0"
