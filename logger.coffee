@@ -23,13 +23,6 @@ fileOptions =
   timestamp: true
   json: false
 
-ERROR_FILENAME = "#{logDir}/bolide-error.log"
-errorFileOptions =
-  level: 'error'
-  filename: ERROR_FILENAME
-  timestamp: true
-  json: false
-
 #Add Loggly transport
 Loggly = require('winston-loggly').Loggly
 logglyOptions =
@@ -38,7 +31,7 @@ logglyOptions =
   subdomain: 'madeye'
   inputToken: Settings.logglyBolideKey
 
-  ###
+###
 logger = new winston.Logger
     transports: [
       new winston.transports.File fileOptions,
@@ -49,10 +42,11 @@ logger = new winston.Logger
     exceptionHandlers: [
       new winston.transports.File filename: ERROR_FILENAME
     ]
-    ###
+###
 
 winston.remove winston.transports.Console
-winston.add winston.transports.Console, consoleOptions
+if process.env.MADEYE_DEBUG
+  winston.add winston.transports.Console, consoleOptions
 winston.add winston.transports.File, fileOptions
 #TODO: We should eventually init loggly for bolide.
 #winston.add Loggly, logglyOptions
