@@ -3,7 +3,9 @@ var app = express();
 var sharejs = require('share').server;
 var Settings = require('madeye-common').Settings;
 var cors = require("./cors");
-var logger = require("./logger").logger
+var LogListener = require('madeye-common').LogListener;
+
+listener = new LogListener({logLevel: 'debug'})
 
 app.use(cors());
 
@@ -16,4 +18,4 @@ app.get("/", function(req,res){
 });
 
 app.listen(Settings.bolidePort);
-logger.info("Listening on port " + Settings.bolidePort);
+listener.log('info', "Listening on port " + Settings.bolidePort);
