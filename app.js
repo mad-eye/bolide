@@ -7,6 +7,11 @@ var LogListener = require('madeye-common').LogListener;
 
 listener = new LogListener({logLevel: 'debug'})
 
+//Clear out prefix used by nginx in case it slips by, like on test
+app.use('/ot', function(req, res, next) {
+  newUrl = req.originalUrl.substr(3);
+  res.redirect(newUrl);
+});
 app.use(cors());
 
 //TODO be more restrictive about domains
