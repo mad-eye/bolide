@@ -11,5 +11,5 @@ fi
 basedir=`dirname $0`
 
 git submodule update --init --recursive
-npm install -q $production share
+npm install --loglevel error $production share
 $basedir/install $production
