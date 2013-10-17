@@ -9,7 +9,7 @@
   "dependencies": {
     "express": "3.3.4",
     "redis": "0.8.4",
-    "share": "git://github.com/mad-eye/ShareJS.git#ace-cursors",
+    "share": "git://github.com/mad-eye/ShareJS.git#madeye",
     "coffee-script": "1.6.3",
     "madeye-common": "0.0.4",
     "winston": "0.7.2",
