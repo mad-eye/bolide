@@ -3,9 +3,10 @@ var app = express();
 var sharejs = require('share').server;
 var Settings = require('madeye-common').Settings;
 var cors = require("./cors");
-var LogListener = require('madeye-common').LogListener;
+var Logger = require('madeye-common').Logger;
 
-listener = new LogListener({logLevel: 'debug'})
+
+log = new Logger('app');
 
 //Clear out prefix used by nginx in case it slips by, like on test
 app.use('/ot', function(req, res, next) {
@@ -23,4 +24,4 @@ app.get("/", function(req,res){
 });
 
 app.listen(Settings.bolidePort);
-listener.log('info', "Listening on port " + Settings.bolidePort);
+log.info("Listening on port " + Settings.bolidePort);
