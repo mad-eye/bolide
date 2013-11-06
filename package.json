@@ -10,9 +10,7 @@
     "express": "3.3.4",
     "share": "git://github.com/mad-eye/ShareJS.git#madeye",
     "coffee-script": "1.6.3",
-    "madeye-common": "0.0.4"
-  },
-  "devDependencies": {
+    "madeye-common": "0.0.4",
     "mocha": "~1.8.0",
     "request": "~2.14.0"
   }
