@@ -3,7 +3,7 @@ var app = express();
 var sharejs = require('share').server;
 var Settings = require('madeye-common').Settings;
 var cors = require("./cors");
-var Logger = require('madeye-common').Logger;
+var Logger = require('pince');
 
 
 log = new Logger('app');
