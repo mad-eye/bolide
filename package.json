@@ -13,6 +13,6 @@
     "madeye-common": "0.0.4",
     "mocha": "~1.8.0",
     "request": "~2.14.0",
-    "pince": "0.0.2"
+    "pince": "0.0.6"
   }
 }
